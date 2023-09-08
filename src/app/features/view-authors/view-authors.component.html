@@ -1,0 +1,17 @@
+<div #element class="container">
+  <div class="card" style="border: 1px solid #24EEA6">
+    <div class="card-body p-4">
+      <h6 class="align-content-start font-weight-bold">AUTHOR DETAILS</h6>
+    </div>
+
+    <div class="container">
+      <div class="author-details">
+        <h2 class="author-name">{{ first_name }} {{ last_name }}</h2>
+        <p class="written-books"><strong>Written Books:</strong></p>
+        <ul class="book-list">
+          <li *ngFor="let book of written_books">{{ book }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
