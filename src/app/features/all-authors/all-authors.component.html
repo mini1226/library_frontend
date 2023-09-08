@@ -1,0 +1,35 @@
+<div #element class="container">
+  <div class="card" style="border: 1px solid #24EEA6; border-radius: 10px;">
+    <div class="card-body p-4">
+      <h6 class="align-content-start font-weight-bold">ALL AUTHORS</h6>
+    </div>
+
+    <div class="container">
+<!--      <h2 class="mb-4">Authors</h2>-->
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th style="text-align: center">View</th>
+          <th style="text-align: center">Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let author of authors">
+          <td>{{ author.id }}</td>
+          <td>{{ author.first_name }}</td>
+          <td>{{ author.last_name }}</td>
+          <td style="text-align: center">
+            <button class="btn custom-view-button" (click)="navigateToViewAuthors(author.id)">VIEW</button>
+          </td>
+          <td style="text-align: center">
+            <button class="btn custom-view-button" (click)="navigateToUpdateAuthors(author.id)">EDIT</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

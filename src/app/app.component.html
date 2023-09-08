@@ -1,1 +1,11 @@
+<!-- app.component.html -->
+<ngx-alerts></ngx-alerts>
+<ngx-spinner bdOpacity="0.9" bdColor="#333" size="medium" type="ball-clip-rotate-multiple"></ngx-spinner>
 <router-outlet></router-outlet>
+
+<main class="d-flex">
+  <app-sidebar></app-sidebar>
+  <div class="pages container-fluid pt-4 pb-4 pl-4 pr-4">
+    <router-outlet></router-outlet>
+  </div>
+</main>

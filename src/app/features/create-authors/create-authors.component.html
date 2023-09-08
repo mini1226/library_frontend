@@ -1,0 +1,31 @@
+<div #element class="container">
+  <div class="card" style="border: 1px solid #24EEA6; border-radius: 10px;">
+    <div class="card-body p-4">
+      <h6 class="align-content-start font-weight-bold">CREATE AUTHORS</h6>
+    </div>
+
+    <div class="container">
+      <form [formGroup]="authorForm" autocomplete="off" class="mt-3">
+        <div class="form-group position-relative">
+          <label class="title-1" for="first_name">First Name</label>
+          <input [formControl]="first_name" class="form-control custom-input-style" id="first_name" placeholder="First Name" type="text">
+          <div *ngIf="first_name.invalid && first_name.touched" class="error-message">
+<!--            <div *ngIf="first_name.errors.required">First Name is required!</div>-->
+          </div>
+        </div>
+
+        <div class="form-group position-relative">
+          <label class="title-1" for="last_name">Last Name</label>
+          <input [formControl]="last_name" class="form-control custom-input-style" id="last_name" placeholder="Last Name" type="text">
+          <div *ngIf="last_name.invalid && last_name.touched" class="error-message">
+<!--            <div *ngIf="last_name.errors.required">Last Name is required!</div>-->
+          </div>
+        </div>
+
+        <div class="text-center pt-5 pb-5">
+          <button class="w-100 btn custom-ok-save-btn-style" (click)="addAuthor()">CREATE AUTHOR</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
